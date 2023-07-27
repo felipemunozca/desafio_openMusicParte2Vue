@@ -1,9 +1,9 @@
 # Curso Desarrollo de Aplicaciones Front-end Trainee 2023
 
 ## Modulo 7 - Desarrollo de Aplicaciones Front-End con Framework Vue
-Sesión 3
+Sesión 4
 
-DRILLING: STATE-VUEX
+DRILLING: OPEN MUSIC
 
 ## Project setup
 ```
