@@ -1,0 +1,16 @@
+Para clonar un proyecto existente en GitHub y luego subirlo a un nuevo repositorio, se deben seguir los siguientes pasos:
+
+1.  Ir al repositorio en GitHub que deseo clonar, al entrar, presiono el botón CODE y selecciono una de las opciones. Para este caso, se selecciona la url de HTTPS y se copia la url.
+
+2.  Se abre la consola de Gitbash o la consola de VSC y se debe navegar hasta llegar a la carpeta donde se guardara el proyecto.
+
+3.  En la consola, se escribe el comando git clone, junto a la url copiada y luego el nombre de la carpeta que se guardara en local:
+    git clone url_del_proyecto nombre_de_la_carpeta
+
+4.  Una vez que el proyecto esta clonado, se deben instalar las dependencias, desde la consola, se entra a la nueva carpeta y se ejecuta el comando:
+    npm install 
+
+5.  El proyecto clonado traerá la información de su repositorio original, por lo que para poder subirlo a un nuevo repositorio se debe remover esa información, para esto, se debe escribir el comando:
+    git remote remove origin 
+
+6.  Finalmente, se crea un nuevo repositorio en GitHub y copia y pega los comandos del nuevo repositorio.
