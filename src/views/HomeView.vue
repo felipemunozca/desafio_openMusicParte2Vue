@@ -6,23 +6,30 @@
     </div>
     <div class="categories-container">
         <h2>Categorías</h2>
+        <p>Numero de albums {{totalAlbums}}</p>
         <div class="categories-buttons">
-          <button @click="redireccionar('/pop')">Pop</button> 
-          <button @click="redireccionar('/rock')">Rock</button>
-          <button @click="redireccionar('/rap')">Rap</button>
+          <button @click="redireccionar('/pop')">Pop ({{contadorAlbumesPop}})</button> 
+          <button @click="redireccionar('/rock')">Rock ({{contadorAlbumesRock}})</button>
+          <button @click="redireccionar('/rap')">Rap ({{contadorAlbumesRap}})</button>
         </div>
     </div>
+    <agregar-album/>
   </div>
 
 </template>
 
 <script>
 // @ is an alias to /src
+import {mapGetters} from 'vuex';
+import AgregarAlbum from '@/components/AgregarAlbum.vue';
 
 export default {
   name: 'HomeView',
   components: {
-    
+    'agregar-album': AgregarAlbum,
+  },
+  computed: {
+    ...mapGetters(['contadorAlbumesPop', 'contadorAlbumesRock', 'contadorAlbumesRap', 'totalAlbums'])
   },
   methods:{
     redireccionar(ruta) {

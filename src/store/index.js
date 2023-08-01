@@ -309,10 +309,38 @@ export default new Vuex.Store({
     ],
   },
   getters: {
+    contadorAlbumesPop: function(state) {
+      return state.pop.length;
+    },
+    contadorAlbumesRock: function(state) {
+      return state.rock.length;
+    },
+    contadorAlbumesRap: function(state) {
+      return state.rap.length;
+    },
+    totalAlbums: function(state, getters) {
+      return getters.contadorAlbumesPop + getters.contadorAlbumesRock + getters.contadorAlbumesRap;
+    },
   },
   mutations: {
+    //como payload recibo el objeto album.
+    //dependiendo de la categoria que seleccione el usuario, se agregara el album a ese arreglo.
+    AGREGAR_ALBUM: function(state, album) {
+      if (album.category == 'rock') {
+        return state.rock.push(album);
+      }
+      if (album.category == 'pop') {
+        return state.pop.push(album);
+      }
+      if (album.category == 'rap') {
+        return state.rap.push(album);
+      }
+    }
   },
   actions: {
+    agregar_album({commit}, album){
+      commit('AGREGAR_ALBUM', album)
+    }
   },
   modules: {
   }

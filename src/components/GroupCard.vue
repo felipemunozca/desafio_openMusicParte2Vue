@@ -3,7 +3,7 @@
     <div class="card-container">
         <div v-for="album in generoMusical" :key="album.id" class="card-detail">
             <h3>{{album.artist}}</h3>
-            <img :src="album.image" :alt="album.album">
+            <img :src="album.image" ><!-- :alt="album.album" -->
             <h4>{{album.album}}</h4>
         </div>
     </div>
