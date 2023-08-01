@@ -323,8 +323,6 @@ export default new Vuex.Store({
     },
   },
   mutations: {
-    //como payload recibo el objeto album.
-    //dependiendo de la categoria que seleccione el usuario, se agregara el album a ese arreglo.
     AGREGAR_ALBUM: function(state, album) {
       if (album.category == 'rock') {
         return state.rock.push(album);
